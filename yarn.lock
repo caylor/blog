@@ -3524,6 +3524,28 @@ gatsby-cli@^1.1.34:
     yargs "^8.0.2"
     yurnalist "^0.2.1"
 
+gatsby-cli@^1.1.44:
+  version "1.1.44"
+  resolved "http://registry.npm.taobao.org/gatsby-cli/download/gatsby-cli-1.1.44.tgz#74c881e01e09d406bb8cd81d3397c2950d3560d9"
+  dependencies:
+    babel-code-frame "^6.26.0"
+    babel-runtime "^6.26.0"
+    bluebird "^3.5.0"
+    common-tags "^1.4.0"
+    convert-hrtime "^2.0.0"
+    core-js "^2.5.0"
+    execa "^0.8.0"
+    fs-extra "^4.0.1"
+    hosted-git-info "^2.5.0"
+    lodash "^4.17.4"
+    pretty-error "^2.1.1"
+    resolve-cwd "^2.0.0"
+    source-map "^0.5.7"
+    stack-trace "^0.0.10"
+    update-notifier "^2.3.0"
+    yargs "^8.0.2"
+    yurnalist "^0.2.1"
+
 gatsby-link@^1.6.34, gatsby-link@^1.6.36:
   version "1.6.36"
   resolved "http://registry.npm.taobao.org/gatsby-link/download/gatsby-link-1.6.36.tgz#3f969d38e9396e2650d3804543c76881eab98feb"

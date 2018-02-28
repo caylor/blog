@@ -1,18 +1,6 @@
 export default [
     {
-        name: 'test',
-        link: 'http://www.baidu.com'
+        name: 'caylor',
+        link: '/'
     },
-    {
-        name: 'caylor'
-    },
-    {
-        name: 'taylor'
-    },
-    {
-        name: 'ffaylor'
-    },
-    {
-        name: 'waylor'
-    }
 ]
