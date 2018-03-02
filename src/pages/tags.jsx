@@ -1,11 +1,11 @@
 import React from 'react'
 import { navigateTo } from 'gatsby-link'
 import { compact, uniq, kebabCase } from 'lodash'
-import wordcloud from 'wordcloud'
 
 export default class Tags extends React.Component {
 
     componentDidMount() {
+        const wordcloud = require('wordcloud')
         const tagsCloud = this.props.data.allMarkdownRemark.edges
             .reduce((tags, { node }) => 
                 compact(uniq(tags.concat(node.frontmatter.tags)))
