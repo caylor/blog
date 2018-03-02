@@ -1,6 +1,8 @@
 module.exports = {
     siteMetadata: {
         title: 'Caylor',
+        description: '',
+        siteUrl: 'https://www.caylor.cc',
     },
     plugins: [
         'gatsby-plugin-react-helmet',
@@ -18,7 +20,12 @@ module.exports = {
         'gatsby-plugin-sharp',
 
         'gatsby-plugin-offline',
-
-        // 'gatsby-plugin-feed',
+        // {
+        //     resolve: 'gatsby-plugin-google-analytics',
+        //     options: {
+        //         trackingId: 'UA-115034831-1'
+        //     }
+        // },
+        'gatsby-plugin-feed',
     ],
 };

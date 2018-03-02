@@ -7,6 +7,7 @@ import ContentArchive from 'material-ui/svg-icons/content/archive'
 import ActionClass from 'material-ui/svg-icons/action/class'
 import SocialPerson from 'material-ui/svg-icons/social/person'
 import ContentLink from 'material-ui/svg-icons/content/link'
+import CommunicationRssFeed from 'material-ui/svg-icons/communication/rss-feed'
 import navBg from '../../static/nav-bg.png'
 
 export default class Nav extends React.Component {
@@ -15,7 +16,7 @@ export default class Nav extends React.Component {
         navVisible: false
     }
 
-    toggleDrawer(visible) {
+    toggleDrawer(e) {
         this.setState({
             navVisible: !this.state.navVisible
         })
@@ -26,11 +27,16 @@ export default class Nav extends React.Component {
         this.toggleDrawer();
     }
 
+    rssFeed() {
+        this.toggleDrawer();
+        window.location.href = '/rss.xml';
+    }
+
     render() {
         return (
             <div>
-                <IconButton style={{position: 'fixed', top: '20px', left: '10px'}}>
-                    <NavigationMenu onClick={this.toggleDrawer.bind(this)} />
+                <IconButton onClick={this.toggleDrawer.bind(this)} style={{position: 'fixed', top: '20px', left: '10px'}}>
+                    <NavigationMenu />
                 </IconButton>
                 <Drawer 
                     docked={false} 
@@ -68,6 +74,14 @@ export default class Nav extends React.Component {
                             primaryText="Links" 
                             leftIcon={<ContentLink />} 
                             onClick={() => this.routeTo('/links')} 
+                        />
+                    </List>
+                    <Divider />
+                    <List>
+                        <ListItem 
+                            primaryText="RSS" 
+                            leftIcon={<CommunicationRssFeed />} 
+                            onClick={this.rssFeed.bind(this)}
                         />
                     </List>
                 </Drawer>

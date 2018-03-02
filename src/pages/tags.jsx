@@ -26,7 +26,7 @@ export default class Tags extends React.Component {
     }
 
     render() {
-        return(
+        return (
             <canvas id="tagsCloud" width="900" height="500" /> 
         )
     }
