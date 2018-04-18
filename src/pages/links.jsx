@@ -1,23 +1,29 @@
 import React from 'react'
 import { Avatar, Chip } from 'material-ui'
+import SocialPerson from 'material-ui/svg-icons/social/person'
 import links from '../data/links'
 
 export default () => {
     return (
         <div style={style.wrapper}>
-            {
-                links.map((link, index) => 
-                    <Chip 
-                        key={index} 
-                        labelStyle={style.chipLabel}
-                        style={style.chip}
-                        onClick={() => window.location.href=link.link || ''} 
-                    >
+            {links.map((link, index) => (
+                <Chip
+                    key={index}
+                    labelStyle={style.chipLabel}
+                    style={style.chip}
+                    onClick={() => window.open(link.link)}
+                >
+                    {link.avatar ? (
                         <Avatar src={link.avatar} style={style.chipIcon} />
-                        {link.name}
-                    </Chip>
-                )
-            }
+                    ) : (
+                        <Avatar
+                            icon={<SocialPerson />}
+                            style={style.chipIcon}
+                        />
+                    )}
+                    {link.name}
+                </Chip>
+            ))}
         </div>
     )
 }
@@ -26,12 +32,14 @@ const style = {
     wrapper: {
         display: 'flex',
         flexWrap: 'wrap',
+        minHeight: 300
     },
     chip: {
         backgroundColor: '#fff',
         border: '1px solid #D3D3D3',
         borderRadius: 0,
         width: 280,
+        height: 50,
         margin: '0 20px 24px 0'
     },
     chipIcon: {

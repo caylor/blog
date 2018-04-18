@@ -7,11 +7,7 @@ export const pageQuery = graphql`
     query CategoryQuery($tag: String) {
         allMarkdownRemark(
             sort: { order: DESC, fields: [frontmatter___date] }
-            filter: {
-                frontmatter: {
-                    tags: { in: [$tag] }
-                },
-            }
+            filter: { frontmatter: { tags: { in: [$tag] } } }
         ) {
             totalCount
             edges {

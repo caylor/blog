@@ -5,13 +5,7 @@ export default PostList
 
 export const pageQuery = graphql`
     query ArchiveQuery($archive: String) {
-        allMarkdownRemark(
-            filter: {
-                frontmatter: {
-                    date: { eq: $archive }
-                }
-            }
-        ) {
+        allMarkdownRemark(filter: { frontmatter: { date: { eq: $archive } } }) {
             totalCount
             edges {
                 node {

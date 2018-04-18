@@ -1,6 +1,6 @@
 export default [
     {
-        name: 'caylor',
-        link: '/'
+        name: '木杉的博客',
+        link: 'http://imushan.com/'
     },
 ]
