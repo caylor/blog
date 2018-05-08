@@ -13,7 +13,13 @@ module.exports = {
                 path: `${__dirname}/blog/`
             }
         },
-        'gatsby-transformer-remark',
+        {
+            resolve: 'gatsby-transformer-remark',
+            options: {
+                excerpt_separator: '<!-- excerpt_end -->',
+
+            }
+        },
 
         // Parse all images files
         'gatsby-transformer-sharp',

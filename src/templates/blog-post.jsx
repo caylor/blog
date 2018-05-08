@@ -1,5 +1,6 @@
 import React from 'react'
 import { Card, CardMedia, CardTitle, CardText } from 'material-ui'
+import '../layouts/post.css'
 import material1 from '../static/material-1.png'
 import material2 from '../static/material-2.png'
 import material3 from '../static/material-3.png'
@@ -28,7 +29,7 @@ export default ({ data }) => {
                 <img src={cover} alt="" height="280" />
             </CardMedia>
             <CardTitle subtitle={frontmatter.date} />
-            <CardText dangerouslySetInnerHTML={{ __html: html }} />
+            <CardText className="markdown-body" dangerouslySetInnerHTML={{ __html: html }} />
         </Card>
     )
 }
