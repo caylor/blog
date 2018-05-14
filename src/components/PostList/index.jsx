@@ -9,7 +9,7 @@ import {
 
 export default ({ children, data }) => {
     return (
-        <div style={{minHeight: '300px'}}>
+        <div>
             {data.allMarkdownRemark.edges.map(({ node }) => (
                 <Card key={node.id} style={{ marginBottom: '20px' }}>
                     <CardHeader

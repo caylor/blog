@@ -24,6 +24,7 @@ export default ({ children, data }) => (
                 style={{
                     margin: '0 auto',
                     maxWidth: 900,
+                    minHeight: 300,
                     paddingTop: '100px'
                 }}
             >
