@@ -31,8 +31,8 @@ export default () => {
 const style = {
     wrapper: {
         display: 'flex',
-        flexWrap: 'wrap',
-        minHeight: 300
+        boxSizing: 'content-box',
+        flexWrap: 'wrap'
     },
     chip: {
         backgroundColor: '#fff',

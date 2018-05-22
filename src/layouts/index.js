@@ -24,7 +24,7 @@ export default ({ children, data }) => (
                 style={{
                     margin: '0 auto',
                     maxWidth: 900,
-                    minHeight: 300,
+                    minHeight: 500,
                     paddingTop: '100px'
                 }}
             >
@@ -43,7 +43,7 @@ export default ({ children, data }) => (
                         'rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px'
                 }}
             >
-                <div id="copyright">Copyright © 2018 Caylor's Blog</div>
+                <div id="copyright">Copyright © { new Date().getFullYear() } Caylor's Blog</div>
                 <div id="power">
                     Based On
                     <a

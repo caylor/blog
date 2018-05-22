@@ -188,7 +188,7 @@ function mountComponentIntoNode(wrapperInstance, container, transaction, shouldR
 }
 ```
 
-我们之前看到`instantiateReactComponent`会获取到不同的组件类型，而且他们都有`mountComponent`方法。`ReactReconciler.mountComponent`就是调用第一个参数`wrapperInstance`的`mountComponent`方法解析出Html结构记为`markup`，然后调用`_mountImageIntoNode`插入到DOM中。
+我们之前看到`instantiateReactComponent`会获取到不同的组件类型，而且他们对`mountComponent`方法有不同的实现。`ReactReconciler.mountComponent`就是调用第一个参数`wrapperInstance`的`mountComponent`方法解析出Html结构记为`markup`，然后调用`_mountImageIntoNode`插入到DOM中。
 
 ```javascript
 _mountImageIntoNode: function (markup, container, instance, shouldReuseMarkup, transaction) {
