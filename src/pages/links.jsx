@@ -31,13 +31,13 @@ export default () => {
 const style = {
     wrapper: {
         display: 'flex',
-        boxSizing: 'content-box',
         flexWrap: 'wrap'
     },
     chip: {
         backgroundColor: '#fff',
         border: '1px solid #D3D3D3',
         borderRadius: 0,
+        boxSizing: 'content-box',
         width: 280,
         height: 50,
         margin: '0 20px 24px 0'

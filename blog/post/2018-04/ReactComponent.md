@@ -92,7 +92,7 @@ var ReactElement = function (type, key, ref, self, source, owner, props) {
 ReactElement.createElement = function (type, config, children) {
   // ...
   return ReactElement(type, key, ref, self, source, ReactCurrentOwner.current, props);
-}
+};
 ```
 
 数据类，JSX元素语法糖及我们通过`class`声明的React组件的`render`方法实际调用的就是`createElement`，最终返回一个`ReactElement`对象。
@@ -128,11 +128,11 @@ _renderSubtreeIntoContainer: function (parentComponent, nextElement, container, 
 
 render: function (nextElement, container, callback) {
   return ReactMount._renderSubtreeIntoContainer(null, nextElement, container, callback);
-},
+}
 ```
 
 方法首先判断了接下来要进行的是渲染还是更新，简单看一下判断逻辑：
-1. `getTopLevelWrapperInContainer`获取当前容器下已存在组件`prevComponent`，
+1. `getTopLevelWrapperInContainer`获取当前容器下已存在组件`prevComponent`。
 2. 若`prevComponent`存在，且`shouldUpdateReactComponent`（对存在的element和待渲染的element的数据类型及type、key属性值进行比较判断），则调用`_updateRootComponent`更新组件，否则最终执行`_renderNewRootComponent`渲染元素。
 
 接着，我们来看下`_renderNewRootComponent`方法。  
