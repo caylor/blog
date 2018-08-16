@@ -1,5 +1,5 @@
 ---
-title: "React源码解析 2 —— 组件生命周期详解"
+title: "React源码阅读 2 —— 组件生命周期详解"
 date: "2018-05-09"
 tags: 
     - React

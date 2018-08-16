@@ -1,5 +1,5 @@
 ---
-title: "React源码解析 1 —— 组件的创建及渲染"
+title: "React源码阅读 1 —— 组件的创建及渲染"
 date: "2018-04-29"
 tags: 
     - React

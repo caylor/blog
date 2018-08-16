@@ -1,5 +1,5 @@
 ---
-title: "React源码解析 4 —— 合成事件"
+title: "React源码阅读 4 —— 合成事件"
 date: "2018-06-07"
 tags: 
     - React

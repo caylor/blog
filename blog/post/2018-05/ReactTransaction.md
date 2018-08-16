@@ -1,5 +1,5 @@
 ---
-title: "React源码解析 3 —— setState与事务机制"
+title: "React源码阅读 3 —— setState与事务机制"
 date: "2018-05-15"
 tags: 
     - React
