@@ -121,7 +121,7 @@ class FluxReduceStore extends FluxStore {
 
 ### Action
 
-我们开始的时候也说了，action会被传递给所有的Stores，那么如何判断这个action是更新哪一块state。这里，我们就约定Action为具有两个属性的简单对象，type和payload。
+我们开始的时候也说了，action会被传递给所有的Stores，那么如何判断这个action是更新哪一块state。这里，我们一般约定Action为具有两个属性的简单对象，type和payload。
 
 ```javascript
 {
