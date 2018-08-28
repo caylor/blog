@@ -27,12 +27,12 @@ Flux是Facebook推出的一种构建用户界面的架构，采用单向数据�
  */
 ```
 
-Flux应用主要包含三部分：Dispatcher、Store和View。整个数据流中，Dispatcher作为枢纽，接收来自用户界面（View）或者系统其它部分（services）的action，然后将其dispatch到所有Stores。Stores则根据action的不同动作，反馈给相对应注册的callback以更新state，同时通知View层数据/状态已改变，View层收到通知重新渲染。  
+Flux应用主要包含三部分：Dispatcher、Store和View。整个数据流中，Dispatcher作为枢纽，接收来自用户界面（View）或者系统其它部分（services）的action，然后将其`dispatch`到所有Stores。Stores则根据action的不同动作，反馈给相对应注册的`callback`以更新state，同时通知View层数据/状态已改变，View层收到通知重新渲染。  
 接下来我们看下各部分的大体实现。
 
 ### Dispatcher
 
-Dispatcher作为中心枢纽管理整个应用的数据流，一般情况下只需要一个。因为他本质上只是一个注册中心，只负责将action分发到Stores。所以Dispatcher中注册的都是Stores接收action后要执行的callback。
+Dispatcher作为中心枢纽管理整个应用的数据流，一般情况下只需要一个。因为他本质上只是一个注册中心，只负责将action分发到Stores。所以Dispatcher中注册的都是Stores接收action后要执行的`callback`。
 
 ```javascript
 class Dispatcher {
@@ -58,7 +58,7 @@ class Dispatcher {
 
 ### Stores
 
-Stores主要存储应用的状态state。Store在实例化是会将Dispatcher作为一个属性，并给提供一个接收action的callback。Stores在接收到dispatch的Action后，执行回调更新状态state，最后发布一个状态已改变的事件声明，订阅了的View则会重新获取状态重新渲染。
+Stores主要存储应用的状态state。Store在实例化是会将Dispatcher作为一个属性，并给提供一个接收action的callback。Stores在接收到`dispatch`的Action后，执行回调更新状态state，最后发布一个状态已改变的事件声明，订阅了的View则会重新获取状态重新渲染。
 
 ```javascript
 // 基类，包含主要逻辑
@@ -121,11 +121,11 @@ class FluxReduceStore extends FluxStore {
 
 ### Action
 
-我们开始的时候也说了，action会被传递给所有的Stores，那么如何判断这个action是更新哪一块state。这里，我们一般约定Action为具有两个属性的简单对象，type和payload。
+我们开始的时候也说了，action会被传递给所有的Stores，那么如何判断这个action是更新哪一块state。这里，我们一般约定Action为具有两个属性的简单对象，`type`和`payload`。
 
 ```javascript
 {
-  type: 'DELETE_USER',
+  type: 'DELETE_POST',
   payload: {
     userID: '...'
   }
