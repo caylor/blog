@@ -46,6 +46,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
               }
               frontmatter {
                 title
+                date
                 tags
               }
               excerpt
