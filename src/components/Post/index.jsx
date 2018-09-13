@@ -7,7 +7,9 @@ import material3 from '../../static/material-3.png'
 import material4 from '../../static/material-4.png'
 import material5 from '../../static/material-5.png'
 
-export default ({ children, data }) => {
+import SEO from '../SEO'
+
+export default ({ data }) => {
   const { frontmatter, html } = data.markdownRemark
   const materialRandom = [material1, material2, material3, material4, material5]
   const cover = frontmatter.cover
@@ -15,19 +17,22 @@ export default ({ children, data }) => {
     : materialRandom[Math.floor(Math.random() * 4 + 1)]
 
   return (
-    <Card>
-      <CardMedia
-        overlay={<CardTitle title={frontmatter.title} />}
-        overlayContentStyle={{ background: 'none' }}
-        style={{ height: '280px' }}
-      >
-        <img src={cover} alt="" height="280" />
-      </CardMedia>
-      <CardTitle subtitle={frontmatter.date} />
-      <CardText
-        className="markdown-body"
-        dangerouslySetInnerHTML={{ __html: html }}
-      />
-    </Card>
+    <div>
+      <SEO data={data} isPostSEO />
+      <Card>
+        <CardMedia
+          overlay={<CardTitle title={frontmatter.title} />}
+          overlayContentStyle={{ background: 'none' }}
+          style={{ height: '280px' }}
+        >
+          <img src={cover} alt="" height="280" />
+        </CardMedia>
+        <CardTitle subtitle={frontmatter.date} />
+        <CardText
+          className="markdown-body"
+          dangerouslySetInnerHTML={{ __html: html }}
+        />
+      </Card>
+    </div>
   )
 }

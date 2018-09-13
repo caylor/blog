@@ -3,22 +3,14 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 
+import SEO from '../components/SEO'
 import Nav from '../components/Nav'
 import './index.css'
 
 export default ({ children, data }) => (
   <MuiThemeProvider>
     <div style={{ backgroundColor: '#f5f7f9' }}>
-      <Helmet
-        title={data.site.siteMetadata.title}
-        meta={[
-          { name: 'description', content: "Caylor's blog" },
-          {
-            name: 'keywords',
-            content: 'gatsby, react, material, blog, caylor, Caylor'
-          }
-        ]}
-      />
+      <SEO data={data} />
       <Nav />
       <div
         style={{

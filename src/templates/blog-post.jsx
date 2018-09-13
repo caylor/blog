@@ -6,7 +6,9 @@ export default Post
 export const query = graphql`
   query BlogPostQuery($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
+      fields {
+        slug
+      }
       frontmatter {
         title
         date
@@ -21,6 +23,7 @@ export const query = graphql`
           }
         }
       }
+      excerpt
       html
     }
   }

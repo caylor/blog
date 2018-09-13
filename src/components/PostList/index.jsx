@@ -14,7 +14,7 @@ export default ({ data }) => {
         <Card key={node.id} style={{ marginBottom: '20px' }}>
           <CardHeader
             title={node.frontmatter.title}
-            subheader={node.frontmatter.date}
+            subtitle={node.frontmatter.date}
           />
           <CardText>{node.excerpt}</CardText>
           <CardActions>
