@@ -47,6 +47,7 @@ export default ({ isPostSEO, data }) => {
 
   return (
     <Helmet>
+      <title>Caylor</title>
       <meta name="description" content="" />
       <script type="application/ld+json">
         {JSON.stringify(schemaOrgJSONLD)}

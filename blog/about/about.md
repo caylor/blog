@@ -12,7 +12,6 @@ Caylor，男，轻度完美主义者。之前乐此不疲地用不同框架搭�
 ## 联系方式
 
 **Mail**: <caylorsgm@gmail.com>  
-**github**: [caylor](https://github.com/caylor)  
 **微博**: [_Caylor](https://weibo.com/p/1005052687562001/home?profile_ftype=1&is_all=1#_0)  
 **网易云音乐**: [_Caylor](http://music.163.com/#/user/home?id=53482351)  
 **ins**: [caylor_dr](https://www.instagram.com/caylor_dr/)  
